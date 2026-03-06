@@ -1,0 +1,530 @@
+body {
+    background: radial-gradient(circle at 50% 0, #1b2a4c, #191d24);
+    color: #eee;
+    display: flex;
+    font-family: sans-serif;
+    padding: 24px;
+    overflow-x: auto;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-shadow: 0 0 2px rgb(25, 55, 85);
+}
+
+@keyframes shimmer {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes animate {
+    to {
+        background-position-x: 5000px;
+    }
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.25rem, 4vw, 3rem);
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    background-image: url("abc.avif");
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 20s linear infinite;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    letter-spacing: 0.35em;
+    margin-bottom: 6px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 4px;
+    width: max-content;
+    table-layout: fixed;
+}
+
+.cell {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: rgba(200, 216, 255, 0.55);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+div {
+    font-size: 12px;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(200, 216, 255, 0.705);
+    margin-bottom: 4px;
+}
+
+br {
+    font-size: 10px;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(200, 216, 255, 0.705);
+}
+
+.espacamento td {
+    height: 5px;
+}
+
+td {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+td h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+td.cell {
+    border: 1px solid rgba(200, 216, 255, 0.08);
+    vertical-align: top;
+    padding: 4px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+td.cell:hover {
+    transform: scale(1.06) translateY(-2px);
+    z-index: 10;
+    filter: brightness(1.15);
+}
+
+.ametais {
+    background: linear-gradient(135deg, rgba(44, 161, 20, 0.18), rgba(23, 160, 53, 0.06));
+    box-shadow: 0 0 6px rgba(44, 161, 20, 0.35), inset 0 0 4px rgba(44, 161, 20, 0.1);
+}
+
+.ametais:hover {
+    box-shadow: 0 0 14px rgba(44, 161, 20, 0.6), inset 0 0 8px rgba(44, 161, 20, 0.15);
+}
+
+.gasNobre {
+    background: linear-gradient(135deg, rgba(16, 82, 148, 0.2), rgba(82, 169, 255, 0.05));
+    box-shadow: 0 0 6px rgba(16, 82, 148, 0.4), inset 0 0 4px rgba(82, 169, 255, 0.1);
+}
+
+.gasNobre:hover {
+    box-shadow: 0 0 14px rgba(16, 82, 148, 0.7), inset 0 0 8px rgba(82, 169, 255, 0.15);
+}
+
+.alcalinos {
+    background: linear-gradient(135deg, rgba(255, 174, 0, 0.15), rgba(255, 196, 0, 0.04));
+    box-shadow: 0 0 6px rgba(255, 174, 0, 0.35), inset 0 0 4px rgba(255, 174, 0, 0.1);
+}
+
+.alcalinos:hover {
+    box-shadow: 0 0 14px rgba(255, 174, 0, 0.6), inset 0 0 8px rgba(255, 174, 0, 0.15);
+}
+
+.alcalinosTerrosos {
+    background: linear-gradient(135deg, rgba(251, 255, 0, 0.15), rgba(238, 255, 0, 0.04));
+    box-shadow: 0 0 6px rgba(251, 255, 0, 0.3), inset 0 0 4px rgba(251, 255, 0, 0.08);
+}
+
+.alcalinosTerrosos:hover {
+    box-shadow: 0 0 14px rgba(251, 255, 0, 0.55), inset 0 0 8px rgba(251, 255, 0, 0.12);
+}
+
+.semiMetal {
+    background: linear-gradient(135deg, rgba(7, 223, 140, 0.15), rgba(7, 223, 140, 0.04));
+    box-shadow: 0 0 6px rgba(7, 223, 140, 0.35), inset 0 0 4px rgba(7, 223, 140, 0.1);
+}
+
+.semiMetal:hover {
+    box-shadow: 0 0 14px rgba(7, 223, 140, 0.6), inset 0 0 8px rgba(7, 223, 140, 0.15);
+}
+
+.Halogenios {
+    background: linear-gradient(135deg, rgba(0, 225, 255, 0.2), rgba(0, 255, 191, 0.05));
+    box-shadow: 0 0 6px rgba(0, 225, 255, 0.4), inset 0 0 4px rgba(0, 225, 255, 0.1);
+}
+
+.Halogenios:hover {
+    box-shadow: 0 0 14px rgba(0, 225, 255, 0.7), inset 0 0 8px rgba(0, 225, 255, 0.15);
+}
+
+.outrosMetais {
+    background: linear-gradient(135deg, rgba(132, 0, 255, 0.15), rgba(174, 0, 255, 0.04));
+    box-shadow: 0 0 6px rgba(132, 0, 255, 0.35), inset 0 0 4px rgba(132, 0, 255, 0.1);
+}
+
+.outrosMetais:hover {
+    box-shadow: 0 0 14px rgba(132, 0, 255, 0.6), inset 0 0 8px rgba(132, 0, 255, 0.15);
+}
+
+.metaisTransicao {
+    background: linear-gradient(135deg, rgba(151, 99, 99, 0.22), rgba(190, 131, 131, 0.05));
+    box-shadow: 0 0 6px rgba(151, 99, 99, 0.4), inset 0 0 4px rgba(151, 99, 99, 0.1);
+}
+
+.metaisTransicao:hover {
+    box-shadow: 0 0 14px rgba(151, 99, 99, 0.7), inset 0 0 8px rgba(151, 99, 99, 0.15);
+}
+
+.Lantanideos {
+    background: linear-gradient(135deg, rgba(7, 197, 165, 0.2), rgba(7, 197, 165, 0.06));
+    box-shadow: 0 0 6px rgba(7, 197, 165, 0.4), inset 0 0 4px rgba(7, 197, 165, 0.1);
+}
+
+.Lantanideos:hover {
+    box-shadow: 0 0 14px rgba(7, 197, 165, 0.7), inset 0 0 8px rgba(7, 197, 165, 0.15);
+}
+
+.Actinideos {
+    background: linear-gradient(135deg, rgba(226, 189, 216, 0.2), rgba(226, 189, 221, 0.05));
+    box-shadow: 0 0 6px rgba(226, 189, 216, 0.35), inset 0 0 4px rgba(226, 189, 216, 0.1);
+}
+
+.Actinideos:hover {
+    box-shadow: 0 0 14px rgba(226, 189, 216, 0.6), inset 0 0 8px rgba(226, 189, 216, 0.15);
+}
+
+.legenda-cel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+}
+
+.legenda-cel:hover { 
+    filter: brightness(2); 
+}
+
+.legenda-cel:hover::after { 
+    opacity: 1; 
+}
+
+.legenda-cel.ametais::after { 
+    background-image: linear-gradient(90deg, rgba(30,130,10,0.2), rgba(100, 220, 60, 0.06), rgba(30,130,10,0.2)); 
+}
+.legenda-cel.gasNobre::after { 
+    background-image: linear-gradient(90deg, rgba(10,60,130,0.2), rgba(82, 169, 255, 0.06), rgba(10,60,130,0.2)); 
+}
+.legenda-cel.alcalinos::after { 
+    background-image: linear-gradient(90deg, rgba(200,130,0,0.2), rgba(255, 208, 0, 0.06), rgba(200,130,0,0.2)); 
+}
+.legenda-cel.alcalinosTerrosos::after { 
+    background-image: linear-gradient(90deg, rgba(180,190,0,0.2), rgba(245, 255, 60, 0.06), rgba(180,190,0,0.2)); 
+}
+.legenda-cel.semiMetal::after { 
+    background-image: linear-gradient(90deg, rgba(5,170,105,0.2), rgba(7, 255, 160, 0.06), rgba(5,170,105,0.2)); 
+}
+.legenda-cel.Halogenios::after { 
+    background-image: linear-gradient(90deg, rgba(0,160,200,0.2), rgba(0, 234, 255, 0.06), rgba(0,160,200,0.2)); 
+}
+.legenda-cel.outrosMetais::after { 
+    background-image: linear-gradient(90deg, rgba(103, 18, 207, 0.4), rgba(190, 100, 255, 0.06), rgba(103, 18, 207, 0.4)); 
+}
+.legenda-cel.metaisTransicao::after { 
+    background-image: linear-gradient(90deg, rgba(130,70,70,0.2), rgba(220, 160, 160, 0.06), rgba(130,70,70,0.2)); 
+}
+.legenda-cel.Lantanideos::after { 
+    background-image: linear-gradient(90deg, rgba(5,150,125,0.2), rgba(7, 230, 197, 0.06), rgba(5,150,125,0.2)); 
+}
+.legenda-cel.Actinideos::after { 
+    background-image: linear-gradient(90deg, rgba(170,120,155,0.2), rgba(245, 215, 235, 0.06), rgba(170,120,155,0.2)); 
+}
+
+.legenda {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px 16px;
+    margin-bottom: 0;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: rgba(200, 216, 255, 0.03);
+    border: 1px solid rgba(200, 216, 255, 0.06);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.legenda-cel {
+    background: none;
+    border: none !important;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 6px;
+    padding: 2px 4px;
+    position: relative;
+    cursor: crosshair;
+}
+
+.legenda-cel.ametais        {
+    background-image: linear-gradient(90deg, rgb(30, 130, 10), rgba(100, 220, 60, 0.171), rgb(30, 130, 10)); 
+}
+
+.legenda-cel.gasNobre       {
+    background-image: linear-gradient(90deg, rgb(10, 60, 130), rgba(82, 169, 255, 0.233), rgb(10, 60, 130)); 
+}
+
+.legenda-cel.alcalinos      {
+    background-image: linear-gradient(90deg, rgb(200, 130, 0), rgba(255, 208, 0, 0.24), rgb(200, 130, 0)); 
+}
+
+.legenda-cel.alcalinosTerrosos {
+    background-image: linear-gradient(90deg, rgb(180, 190, 0), rgba(245, 255, 60, 0.192), rgb(180, 190, 0)); 
+}
+
+.legenda-cel.semiMetal      {
+    background-image: linear-gradient(90deg, rgb(5, 170, 105), rgba(7, 255, 160, 0.253), rgb(5, 170, 105)); 
+}
+
+.legenda-cel.Halogenios     {
+    background-image: linear-gradient(90deg, rgb(0, 160, 200), rgba(0, 234, 255, 0.26), rgb(0, 160, 200)); 
+}
+
+.legenda-cel.outrosMetais   {
+    background-image: linear-gradient(90deg, rgb(100, 0, 220), rgba(190, 100, 255, 0.096), rgb(100, 0, 220)); 
+}
+
+.legenda-cel.metaisTransicao {
+    background-image: linear-gradient(90deg, rgb(130, 70, 70), rgba(220, 160, 160, 0.185), rgb(130, 70, 70)); 
+}
+
+.legenda-cel.Lantanideos    {
+    background-image: linear-gradient(90deg, rgb(5, 150, 125), rgba(7, 230, 197, 0.253), rgb(5, 150, 125)); 
+}
+
+.legenda-cel.Actinideos     {
+    background-image: linear-gradient(90deg, rgb(170, 120, 155), rgba(245, 215, 235, 0.089), rgb(170, 120, 155)); 
+}
+
+.legenda-cel::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.legenda-cel.ametais::before            { 
+    background: linear-gradient(to bottom, rgba(44, 161, 20, 0.623), #17a03548); box-shadow: 0 0 6px rgba(44, 161, 20, 0.5); 
+}
+
+.legenda-cel.gasNobre::before           { 
+    background: linear-gradient(to bottom, rgba(16,82,148,0.8), #52a9ff55); box-shadow: 0 0 6px rgba(16, 82, 148, 0.5); 
+}
+
+.legenda-cel.alcalinos::before{ 
+    background: linear-gradient(to bottom, rgba(255,174,0,0.6), #ffc40055); box-shadow: 0 0 6px rgba(255, 174, 0, 0.5); 
+}
+
+.legenda-cel.alcalinosTerrosos::before  { 
+    background: linear-gradient(to bottom, rgba(251,255,0,0.8), #eeff0055); box-shadow: 0 0 6px rgba(251, 255, 0, 0.4); 
+}
+
+.legenda-cel.semiMetal::before          { 
+    background: linear-gradient(to bottom, rgba(7,223,140,0.6), #07df8c55); box-shadow: 0 0 6px rgba(7, 223, 140, 0.5); 
+}
+
+.legenda-cel.Halogenios::before         { 
+    background: linear-gradient(to bottom, rgba(0,225,255,0.9), #00ffbf55); box-shadow: 0 0 6px rgba(0, 225, 255, 0.5); 
+}
+
+.legenda-cel.outrosMetais::before       { 
+    background: linear-gradient(to bottom, rgba(132,0,255,0.5), #ae00ff55); box-shadow: 0 0 6px rgba(132, 0, 255, 0.5); 
+}
+
+.legenda-cel.metaisTransicao::before    { 
+    background: linear-gradient(to bottom, rgba(151,99,99,0.9), #be838355); box-shadow: 0 0 6px rgba(151, 99, 99, 0.5); 
+}
+
+.legenda-cel.Lantanideos::before        { 
+    background: linear-gradient(to bottom, rgba(7,197,165,0.9), #07c5a570); box-shadow: 0 0 6px rgba(7, 197, 165, 0.5); 
+}
+
+.legenda-cel.Actinideos::before         { 
+    background: linear-gradient(to bottom, rgba(226,189,216,0.9), #e2bddd55); box-shadow: 0 0 6px rgba(226, 189, 216, 0.5); 
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: linear-gradient(160deg, #1a2744, #151a22);
+    border: 1px solid rgba(200, 216, 255, 0.12);
+    border-radius: 16px;
+    padding: 36px 32px 28px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(100, 140, 220, 0.08);
+    transform: scale(0.92) translateY(16px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(200, 216, 255, 0.4);
+    font-size: 26px;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+    padding: 4px;
+}
+
+.modal-close:hover {
+    color: rgba(200, 216, 255, 0.9);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modal-numero {
+    font-family: "Micro 5", sans-serif;
+    font-size: 18px;
+    color: rgba(200, 216, 255, 0.5);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.modal-simbolo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+    color: #c8d8ff;
+    text-shadow: 0 0 20px currentColor;
+}
+
+.modal-nome {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: rgba(200, 216, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-massa {
+    font-family: "Micro 5", sans-serif;
+    font-size: 16px;
+    color: rgba(200, 216, 255, 0.45);
+    display: block;
+}
+
+.modal-categoria {
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: rgba(200, 216, 255, 0.04);
+    border: 1px solid rgba(200, 216, 255, 0.06);
+}
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(200, 216, 255, 0.05);
+}
+
+.modal-row:last-child {
+    border-bottom: none;
+}
+
+.modal-label {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(200, 216, 255, 0.35);
+}
+
+.modal-value {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    color: rgba(200, 216, 255, 0.85);
+    text-align: right;
+    max-width: 55%;
+    word-break: break-word;
+}
